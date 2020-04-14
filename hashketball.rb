@@ -129,17 +129,14 @@ end
 
 # Write code here
 def num_points_scored(player_name_input)
-  points_total = game_hash.each_pair do |team, attribute|
-    # test if attribute is Array
-    # test if array contains hash
-    #game_hash[:home][:players][:player_name] # want to test if this is equal to player_name_input
-    points = attribute.each do |players, values|
-      more_points = values.each do |player_id, stats|
-        if player_id == player_name
+  game_hash.each do |team, attribute|
+    #game_hash[:home][:players][:player_name]
+    attribute.each do |players, values|
+      values.each do |player_id, stats|
+        if player_id == player_name_input
           return player_id
         end
       end
-      attribute[points][more_points]
     end #end attribute
   end #end game_hash
 end #end def
