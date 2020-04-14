@@ -135,7 +135,6 @@ def num_points_scored(player_name_input)
           player_array.each do |player_stats|
           if player_stats.include?(player_name_input)
             return player_stats[:points]
-            binding.pry
           end #close if
         end #close player_array
       end #close if
