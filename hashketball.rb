@@ -134,6 +134,7 @@ def num_points_scored(player_name_input)
         if player_name[:player_name] == player_name_input
           return player_name[:points]
         end
+      end
   end #end game_hash
 end #end def
 
