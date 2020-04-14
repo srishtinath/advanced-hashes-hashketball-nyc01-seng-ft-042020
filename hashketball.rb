@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pry'
 def game_hash
   {
     home: {
@@ -127,3 +128,42 @@ def game_hash
 end
 
 # Write code here
+def num_points_scored(player_name_input)
+  points_total = game_hash.each_pair do |team, attribute|
+    # test if attribute is Array
+    # test if array contains hash
+    #game_hash[:home][:players][:player_name] # want to test if this is equal to player_name_input
+    points = attribute.each do |players, values|
+      more_points = values.each do |player_id, stats|
+        if player_id == player_name
+          return player_id
+        end
+      end
+      attribute[points][more_points]
+    end #end attribute
+  end #end game_hash
+end #end def
+
+def shoe_size
+
+end
+
+def team_colors
+
+end
+
+def team_names(hash)
+
+end
+
+def player_numbers(team_name)
+
+end
+
+def player_stats(player_name)
+
+end
+
+def big_shoe_rebounds
+
+end
