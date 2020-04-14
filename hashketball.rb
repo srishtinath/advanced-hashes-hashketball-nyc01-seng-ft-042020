@@ -131,7 +131,7 @@ end
 def num_points_scored(player_name_input)
   game_hash.each do |team, attribute|
     attribute.each do |attribute_value, player_array|
-      if aplayer_array.is_a?(String) == false
+      if player_array.is_a?(String) == false
           player_array.each do |player_stats|
           if player_stats[:player_name] == player_name_input
             return player_stats[:points]
