@@ -133,7 +133,7 @@ def num_points_scored(player_name_input)
     attribute.each do |attribute_value, player_array|
       if player_array.is_a?(String) == false
           player_array.each do |player_stats|
-          if player_stats[:player_name] == player_name_input
+          if player_stats.include?(player_name_input)
             return player_stats[:points]
           end
         end
